@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    color: white;
+    cursor: none;
+    font-family: "plain light";
+}
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #0b0b0b;
+    position: fixed;
+    z-index:999;
+    cursor: none;
+    color: white;
+    padding: 20vh 5.5vw;
+    
+} 
+#crsr{
+    height: 2.58vw;
+    width: 2.58vw;
+    border: 1px solid #9e9e9e;
+    border-radius: 50%;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    z-index: 998;
+
+}
+.line{
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap:5.9vw;
+}
+.line h1{
+    display: flex;
+    text-transform: uppercase;
+    font-size: 7.2vw;
+    font-weight: 600;
+    line-height: 7.5vw;
+}
+
+.line h2{
+    text-transform:uppercase ;
+    margin-left: -3vw;
+    font-family: plain light;
+    font-size:7.2vw;
+    font-weight:600;
+    opacity:0;
+    animation-duration: 1.88s;
+    animation-iteration-count:3;
+    position: fixed;
+    left: 74%;
+}
+@keyframes animate {
+    0%{
+        font-family: plain light;
+        -webkit-text-stroke: 0.1px white;
+        font-weight: 500;
+        opacity: 1;
+    }
+    48%{
+        font-family: plain light;
+        -webkit-text-stroke: 0.1px white;
+        font-weight: 500;
+        opacity: 0;
+    }
+    50%{
+        font-family: silk serif;
+        -webkit-text-stroke: 0.3px white;
+        font-weight: 500;
+        color: transparent;
+        opacity: 1;
+        
+    }  
+     100%{
+        font-family: silk serif;
+        -webkit-text-stroke: 0.3px white;
+        font-weight: 500;
+        color: transparent;
+        opacity: 0;
+        
+    }    
+}
+#line-count{
+     display: flex;
+     align-items: center;
+    gap:1.24vw;
+    margin-left: 4.7vw;
+    font-family: silk serif;
+    margin-bottom: 3vw;
+
+}
+#line-count h5,#line-count h6{
+   font-size: 3.3vw;
+   font-weight: 100;
+}
+#line-count h5{
+
+    width: 5.1vw;
+}
+h4{
+    width: fit-content;
+    font-family: plain light;
+    font-size: 1vw;
+   margin-top: 2.8vw;
+   margin-left: 24vw;
+   font-weight: 100;
+   line-height: 1.5vw;
+}
+#main{
+    position: relative;
+    background-color: #0b0b0b;
+    overflow: hidden;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    padding: 3.08vw 5.2vw; 
+    
+}
+#page1 #nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+/* background-color: green; */
+
+}
+#page1 #nav #nav-2{
+    display: flex;
+    align-items: center;
+    gap: 2.6vw;
+    width: fit-content;
+justify-content: center;
+    height: fit-content;
+}
+#page1 #nav #nav-2::before{
+    content:"Obys-- Creative Design Agency";
+    width: 5vw;
+    position: fixed;
+    left: 28%;
+    font-family: plain;
+    font-weight: 300;
+    font-size: 1vw;
+    top: 7.6%;
+    line-height: 1.05vw;
+    letter-spacing: -0.1px;
+
+}
+#menu{
+    position: absolute;
+    /* background-color: red; */
+    /* padding: 1vw; */
+    width: 3.8vw;
+    height: 3.8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left:4%
+    
+}
+#menu img{
+    /* background-color: red; */
+    width: 1.2vw;
+    height: 1.2vw;
+}
+#logo{
+    position: relative;
+    left:4%
+}
+#page1 #nav #nav-2 h2{
+    font-size: 1vw;
+    font-weight: 300;
+    font-family: plain;
+}
+.hero{
+    /* background-color: red; */
+    overflow: hidden;
+    height: fit-content;
+   width: 80%;
+    line-height: 7vw;
+    margin-left: 24.99%;
+    font-family: plain ;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 999;
+}
+#hero3 h2{
+    font-size: 7.2vw; 
+    text-transform: uppercase;
+    font-family: plain;
+    font-weight: 500;  
+    text-decoration: underline;
+    text-decoration-thickness: 10px;
+    text-underline-offset: 15px;  
+    height: fit-content;
+    margin-bottom: 0.9vw;
+}
+
+#hero3 h3{
+    font-size: 7.2vw; 
+    text-transform: uppercase;
+    font-family: plain;
+    font-weight: 500;
+    margin-left: 0.8vw;  
+    
+}
+
+#hero3 h2:hover{
+    -webkit-text-stroke: 1px white;
+    color: transparent;
+    text-decoration: none;
+    transition: all 0.3s ease;
+   
+}
+.superhero h6{
+    font-family: silk serif;
+    position: absolute;
+    left: 18.7%;
+    font-size: 3.26vw;
+    top: 32.48%;
+    font-weight: 400;
+    
+}
+.hero h1{
+    /* letter-spacing:-0.01vw; */
+    font-size: 7.42vw;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.hero:nth-child(3){
+    margin-top: 10.9vw;
+}
+.superhero .yellow{
+    /* display: none; */
+    position: absolute;
+    width: 23vw;
+    height: 31vw;
+    background: linear-gradient(to bottom, #3F7DF4 50%, yellow 50%);
+}
+.superhero #blue{
+    display: flex;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 20%;
+   width: 62vw;
+   height: 31vw;
+    /* background-color: green; */
+}
+#scroll{
+   position: fixed;
+    /* background-color: red; */
+    width: 3.4vw;
+    height: 1.64vw;
+    bottom: 11.4%;
+    display: flex;
+    left:4.8%;
+    justify-content: center;
+    align-items: center;
+      overflow: hidden;
+}
+#scroll h3{
+    font-size: 1vw;
+    font-family: plain;
+    font-weight: 500;
+    color: rgb(88, 88, 88);
+    animation-name: scrlanim;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes scrlanim {
+    0%{
+        transform: translateY(-105%);
+    }
+    48%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(130%);
+    } 
+}
+#page2{
+    height: 100vh;
+    background-color: #151515;
+    /* display: flex;
+    justify-content: flex-end;
+    align-items: center; */
+    padding-top: 5vh;
+    position: relative;
+}
+#cont-vid{
+    height: 70vh;
+    width: 71vw;
+    position: relative;
+    left: 28%;
+    background-color: #0b0b0b;
+    /* background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg); */
+    /* background-size: 100% 100%;
+    background-origin:cover ; */
+}
+ #cont-vid img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top:0;
+}
+
+#cont-vid video{
+    height: 99%;
+    width: 100%;
+    object-fit: cover;
+}
+
+ #page2 .play{
+    position: absolute;
+    top: -10%;
+    left: 80%;
+    z-index: 14;
+    height: 10vw;
+    width: 10vw;
+    background-color: #FFA63D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ #page2 .play #play{
+    font-size: 1.7vw;
+    /* display: none; */
+ }
+#page2 .play #pause{
+    font-size: 2.4vw;
+    display: none;
+ }
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+}
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    position: relative;
+    padding-top: 7vh;
+}
+#page4-cont{
+    margin-left:28%;
+    position: relative;
+    width: 78%;
+}
+#page4-cont h1{
+    text-transform: uppercase;
+    font-size: 7.4vw;
+    font-family: plain;
+    font-weight: 500;
+}
+#page4 .underline{
+    margin-top: 5vw;
+    width: 67vw;
+    height: 1px;
+    background-color: white;
+}
+#page4-cont>p{
+    line-height: 2.62vw;
+    font-family: plain;
+    margin-top: 4vw;
+    font-size: 2.4vw;
+    font-weight: 300;
+    letter-spacing: -0.09vw;
+    /* background-color: red; */
+    width: fit-content;
+}
+#pg4-image{
+    position: relative;
+   margin-top: 4vw;
+   height: 70vw;
+   width: 55.9vw;
+   /* background-color: red; */
+}
+#pg4-image .imm{
+    height: 41vw;
+    width: 32.5vw;
+    /* background-color: red; */
+    overflow: hidden;
+    margin-right: 2.5vw;
+}
+#pg4-image .imm img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 107.8%;
+}
+#pg4-image{
+    display: flex;
+}
+#img-cont #one{
+    margin-top: -8px;
+    font-size:0.98vw;
+    margin-bottom: 1.34vw;
+    line-height: 1.58vw;
+    padding: 0 -0.1vw;
+    font-family: plain;
+    font-weight: 400;
+    color: #FFFFFF;
+
+}
+#img-cont #two{
+    font-family: plain;
+    font-size:0.98vw;
+    font-weight: 400;
+    margin-bottom: 1.6vw;
+    line-height: 1.58vw;
+    padding: 0 -0.1vw;
+    color: #FFFFFF;
+
+}
+#pg4-panel{
+    position: absolute;
+    left: 41.9%;
+    top: 39%;
+    height: 42.4vw;
+    width: 32.5vw;
+    background-color: #3F7DF4;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.panel-cont{
+    height: 7vw;
+    width: 25vw;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(213, 213, 213);
+}
+.panel-cont:nth-child(5){
+    margin-bottom: 3vw;
+}
+.panel-cont .panel-desx>h6{
+    font-size: 1vw;
+    font-family: plain;
+    font-weight: 200;
+    line-height: 18px;
+    
+}
+.panel-desx{
+    width: 10vw;
+    height: fit-content;
+    margin-left: 1vw;
+}
+.panel-cont>h2{
+    font-family: plain;
+    font-weight: 300;
+    font-size: 1.59vw;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: red; */
+    height: 2.5vw;
+}
+
+#page4 .underline-2{
+    margin-top: 8vw;
+    width: 67vw;
+    height: 1px;
+    background-color: white;
+    top: 100%;
+}
+#page4 h5{
+    font-size: 1vw;
+    font-family: plain;
+    font-weight: 300;
+    height: 4.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+#page4-cont>h6{
+    position: absolute;
+    font-family: silk serif;
+    position: absolute;
+    left: -12.4%;
+    font-size: 3.26vw;
+    top:0.78%;
+    font-weight: 400;
+}
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    padding: 5vw 0;
+    /* background-color: #151515; */
+}
