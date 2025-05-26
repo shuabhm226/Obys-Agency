@@ -9,7 +9,7 @@ html, body {
     height: 100%;
     width: 100%;
     color: white;
-    cursor: none;
+    /* cursor: none; */
     font-family: "plain light";
 }
 #loader{
@@ -119,21 +119,29 @@ h4{
 }
 #main{
     position: relative;
-    background-color: #0b0b0b;
+    background-color: #151515;
     overflow: hidden;
+    z-index: 99;
+}
+#page0{
+    height: 100vh;
+    width: 100%;
+    background-color: #0b0b0b;
+    position: fixed;
 }
 #page1{
     height: 100vh;
     width: 100%;
     background-color: #151515;
-    padding: 3.08vw 5.2vw; 
-    
+    z-index: 100;
+    margin-bottom: 8vw;
 }
 #page1 #nav{
     display:flex;
     justify-content: space-between;
     align-items: center;
 /* background-color: green; */
+    padding: 3.08vw 5.2vw; 
 
 }
 #page1 #nav #nav-2{
@@ -145,7 +153,7 @@ justify-content: center;
     height: fit-content;
 }
 #page1 #nav #nav-2::before{
-    content:"Obys-- Creative Design Agency";
+    content:"Obys— Creative Design Agency";
     width: 5vw;
     position: fixed;
     left: 28%;
@@ -188,8 +196,8 @@ justify-content: center;
     overflow: hidden;
     height: fit-content;
    width: 80%;
-    line-height: 7vw;
-    margin-left: 24.99%;
+    line-height: 7.1vw;
+    margin-left: 27.99%;
     font-family: plain ;
     display: flex;
     align-items: center;
@@ -197,7 +205,7 @@ justify-content: center;
     z-index: 999;
 }
 #hero3 h2{
-    font-size: 7.2vw; 
+    font-size: 7.39vw; 
     text-transform: uppercase;
     font-family: plain;
     font-weight: 500;  
@@ -240,7 +248,7 @@ justify-content: center;
     font-weight: 500;
 }
 .hero:nth-child(3){
-    margin-top: 10.9vw;
+    margin-top: 7.9vw;
 }
 .superhero .yellow{
     /* display: none; */
@@ -294,29 +302,27 @@ justify-content: center;
 }
 #page2{
     height: 100vh;
-    background-color: #151515;
-    /* display: flex;
-    justify-content: flex-end;
-    align-items: center; */
-    padding-top: 5vh;
+    background-color:#151515;
+    padding-top: 8vh;
     position: relative;
+    margin-bottom: -4vw;
 }
 #cont-vid{
     height: 70vh;
     width: 71vw;
     position: relative;
-    left: 28%;
+    left: 30%;
     background-color: #0b0b0b;
-    /* background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg); */
-    /* background-size: 100% 100%;
-    background-origin:cover ; */
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+    background-size: cover;
+   
 }
  #cont-vid img{
     position: absolute;
     height: 100%;
     width: 100%;
     object-fit: cover;
-    top:0;
+    top:-0.1%;
 }
 
 #cont-vid video{
@@ -327,10 +333,10 @@ justify-content: center;
 #page2 .play{
     position: absolute;
     top: -15%;
-    left: 75%;
+    left: 67%;
     z-index: 14;
-    height: 10vw;
-    width: 10vw;
+    height: 9.9vw;
+    width: 9.9vw;
     background-color: #FFA63D;
     border-radius: 50%;
     display: flex;
@@ -350,20 +356,28 @@ justify-content: center;
     width: 100%;
     background-color: #151515;
     position: relative;
+    /* padding: 17vh; */
+}
+#page3 .underline{
+margin-top: 5vw;
+    width: 67vw;
+    height: 1px;
+    background-color: white;
 }
 #page4{
     min-height: 100vh;
     width: 100%;
     background-color: #151515;
     position: relative;
-    padding-top: 7vh;
+    padding-top: 36vh;
+
 }
-#page4-cont,#page6-cont{
+#page4-cont,#page6-cont,#page3-cont{
     margin-left:28%;
     position: relative;
     width: 78%;
 }
-#page4-cont h1,#page6 #page6-cont h1{
+#page4-cont h1,#page6 #page6-cont h1,#page3-cont h1{
     text-transform: uppercase;
     font-size: 7.4vw;
     font-family: plain;
@@ -493,7 +507,7 @@ justify-content: center;
     align-items: center;
     width: fit-content;
 }
-#page4-cont>h6,#page6-cont>h6{
+#page4-cont>h6,#page6-cont>h6, #page3-cont>h6{
     position: absolute;
     font-family: silk serif;
     position: absolute;
@@ -505,7 +519,7 @@ justify-content: center;
 #page5{
     min-height: 100vh;
     width: 100%;
-    padding: 4.5vw 0;
+    padding: 2.9vw 0;
     background-color: #151515;
     position: relative;
 }
@@ -556,8 +570,9 @@ justify-content: center;
     position: relative;
     background-color: #151515;
     width: 100%;
-    min-height: 110vh;
+    height: 110vh;
     padding: 4.2vw 0;
+    /* margin-top: 4vw; */
 }
 #page6-cont #i{
     position: absolute;
@@ -609,6 +624,7 @@ justify-content: center;
     font-size: 1.7vw;
     font-weight:300;
     line-height: 28.4px;
+    /* background-color: red; */
     
 }
 #address{
@@ -652,7 +668,7 @@ justify-content: center;
     background-color: white;
 }
 #page6-cont h5{
-    margin-bottom: -64px;
+    /* margin-bottom: 50vw; */
     font-size: 1.09vw;
     font-weight: 300;
     width: fit-content;
@@ -662,5 +678,6 @@ justify-content: center;
     justify-content: center;
     align-items: center;
     letter-spacing: -0.6px;
+    /* background-color: red; */
     
 }

@@ -8,6 +8,7 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet"
 />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://gistcdn.githack.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css">
@@ -33,8 +34,10 @@
         <h4>Please wait <br>a few seconds.</h4>
           
     </div> 
+    
     <div id="main">
-        <div id="page1">
+        <div id="page0"></div>
+        <div id="page1" data-scroll>
             <div id="nav">
                 <div id="menu">
                     <img  src="icons8-circled-menu-24.png" alt="circled-menu--v1"/>
@@ -83,7 +86,7 @@
                 <h3>Scroll</h3>
             </div>
         </div>
-        <div id="page2">
+        <div id="page2" data-scroll data-scroll-speed="-2">
             <div id="cont-vid">
                 <div class="play">
                     <i  id="play" class="ri-play-large-fill"></i>
@@ -93,8 +96,13 @@
                 <video muted autoplay  src="https://obys.agency/wp-content/uploads/2024/12/Obys-Showreel-2024.mp4" ></video>
             </div>
         </div>
-        <div id="page3"></div>
-        <div id="page4">
+        <div id="page3" data-scroll data-scroll-speed="1">
+            <div id="page3-cont">
+                <h6>02</h6>
+                <h1>Our projects</h1>
+                <div class="underline"></div>
+        </div>
+        <div id="page4" >
             <div id="page4-cont">
                 <h6>03</h6>
                 <h1>About obys</h1>
@@ -148,7 +156,7 @@
                         <h5>We work with</h5>
             </div>
         </div>
-         <div id="page5">
+         <div id="page5" >
             <div id="scroller-wrapper">
                 <div class="scroller-row scroll-right">
             <div  class="scroller-track">
@@ -176,7 +184,7 @@
             </div>
         </div> 
          </div>
-         <div id="page6">
+         <div id="page6"  >
              <div id="page6-cont">
                 <h6>04</h6>
                 <h1 >Let's Create</h1>
@@ -210,7 +218,8 @@
          </div>
          
     </div>
-
+     
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
