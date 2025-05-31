@@ -55,7 +55,7 @@ setInterval(function(){
      }else{
         h5.innerHTML = grow;
      }
-},20);
+},18.8);
     }
 })
 tl.to(".line h2",{
@@ -83,7 +83,7 @@ gsap.from("#nav,.superhero",{
     delay:5.58,
 
 })
-gsap.from("#nav #nav-2,.superhero h6",{
+gsap.from("#nav #nav-2,.superhero h6,#page2 .play",{
     opacity:1,
      delay:5.65
 })
@@ -92,28 +92,159 @@ gsap.from("#hero1 h1,#hero2 h1,#hero3 h2,#hero3 h3,#hero4 h1",{
     stagger:0.2,
      delay:5.65,
 })
+tl.from("#page2",{
+    opacity:0,
+    delay:1,
+    duration:2
+},"-=1.2")
+
+gsap.from(".underline,.underline2,.underlinne-2", {
+  width: "1vw",
+  duration: 2,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".underline",
+    scroller: "#main", // remove if not using a custom scroll container
+    start: "top 80%",
+    end: "top 20%",
+    // scrub: true,
+    // markers: true
+  }
+});
+gsap.from(".underline-2", {
+  width: "1vw",
+  duration: 2,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".underline-2",
+    scroller: "#main", // remove if not using a custom scroll container
+    start: "top 80%",
+    end: "top 20%",
+    // scrub: true,
+    // markers: true
+  }
+});
+tl.from(".underline", {
+  width: "1vw",
+  duration: 2,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: ".underline",
+    scroller: "#main", // remove if not using a custom scroll container
+    start: "top 80%",
+    end: "top 20%",
+    // scrub: true,
+    // markers: true
+  }
+});
 
 }
+
+
 function cursorAnim(){
-    document.addEventListener("mousemove", function(de) {
-        gsap.to("#crsr", {
-            left: de.clientX,
-            top: de.clientY,
-            // transform: "translate(-50%,-50%)",
-        });
-    });
+    Shery.mouseFollower({
+    skew: true,
+    duration: 1,
+    opacity:0,
 
-    // Add this to enable Shery's cursor
-    Shery.mouseFollower();
+  });
+    Shery.makeMagnet("#nav #nav-2 h2,#menu");
 
-    Shery.makeMagnet("#nav #nav-2 h2,#menu,#page2 .play", {});
-
-
-
+    var vidcont = document.querySelector("#cont-vid");
+    var vid = document.querySelector("#cont-vid video");
+    vidcont.addEventListener("mouseenter",function(){
+      vidcont.addEventListener("mousemove",function(dets){
+        gsap.to(".mousefollower",{
+          opacity:0
+        })
+         gsap.to(".vid-cursor",{
+          left:dets.x - 560,
+          y:dets.y - 200,
+         })
+      })
+    })
+    vidcont.addEventListener("mouseleave",function(){
+      gsap.to(".mousefollower",{
+        opacity:1
+      })
+      gsap.to(".vid-cursor",{
+        left:"67%",
+        top:"-15%"
+      })
+      vid.pause();
+      vid.style.opacity="0";
+      document.querySelector(".vid-cursor").innerHTML=`<i class="ri-play-large-fill"></i>`
+      gsap.to(".vid-cursor",{
+        scale:1})
+    })
+    var flag=0;
+    vidcont.addEventListener("click",function(){
+      if(flag==0){
+      vid.play();
+      vid.style.opacity = "1";
+      document.querySelector(".vid-cursor").innerHTML=`<i class="ri-pause-large-fill"></i>`
+      gsap.to(".vid-cursor",{
+        scale:0.5
+      })
+    flag =1;
+    }else{
+      vid.pause();
+      vid.style.opacity="0";
+      document.querySelector(".vid-cursor").innerHTML=`<i class="ri-play-large-fill"></i>`
+      gsap.to(".vid-cursor",{
+        scale:1
+      })
+      flag=0
+    }
+      
+    })
+    
+}
+function sheryAnimation(){
+    Shery.imageEffect(".img-div",{
+        style:5,
+        config:{"a":{"value":2.06,"range":[0,30]},"b":{"value":0.94,"range":[-1,1]},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":0.7986096906349526},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":false},"growSize":{"value":4,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.15,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":true},"onMouse":{"value":1},"noise_speed":{"value":0.15,"range":[0,10]},"metaball":{"value":0.44,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.49,"range":[0,2]},"noise_scale":{"value":8.4,"range":[0,100]}},
+        gooey:true
+    })
+}
+function flagffect(){
+    document.querySelector("#hero3").addEventListener("mouseenter",function(){
+  gsap.to("#flag",{
+    opacity:1
+  })
+})
+document.querySelector("#hero3").addEventListener("mouseleave",function(){
+  gsap.to("#flag",{
+    opacity:0
+  })
+})
+document.addEventListener("mousemove",function(dets){
+    gsap.to("#flag",{
+      x:dets.x,
+      y:dets.y,
+      transform:"translate(-50%,-50%)"
+    })
+})
 }
 
+sheryAnimation();
+flagffect();
+cursorAnim();
 LocomotiveAnimation();
-
-// cursorAnim();
 loaderAinmation();
-
+// document.querySelector("#page6-cont h1").addEventListener("mouseenter",function(){
+  
+//   gsap.from("#page6-cont h1",{
+//     onStart:function(){
+//       $('#page6-cont h1').textillate({ in: { effect: 'fadeIn' },out:{effect: 'fadeOut',} });
+//     }
+//   })
+// })
+// document.querySelector("#page6-cont h1").addEventListener("mouseleave",function(){
+  
+//   gsap.from("#page6-cont h1",{
+//     onStart:function(){
+//       $('#page6-cont h1').textillate({ out:{effect: 'fadeOut',} });
+//     }
+//   })
+// })
