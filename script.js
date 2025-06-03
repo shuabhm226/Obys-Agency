@@ -98,7 +98,7 @@ tl.from("#page2",{
     duration:2
 },"-=1.2")
 
-gsap.from(".underline,.underline2,.underlinne-2", {
+gsap.from(".underline", {
   width: "1vw",
   duration: 2,
   ease: "power2.out",
@@ -111,36 +111,80 @@ gsap.from(".underline,.underline2,.underlinne-2", {
     // markers: true
   }
 });
-gsap.from(".underline-2", {
+gsap.from(" #page4 .underline-2",{
   width: "1vw",
-  duration: 2,
+  duration: 2.8,
+  // delay:0.1,
   ease: "power2.out",
   scrollTrigger: {
     trigger: ".underline-2",
     scroller: "#main", // remove if not using a custom scroll container
-    start: "top 80%",
-    end: "top 20%",
+    start: "top 70%",
+    end: "top 10%",
     // scrub: true,
     // markers: true
   }
 });
-tl.from(".underline", {
+gsap.from("#page6 .underline-2", {
   width: "1vw",
   duration: 2,
   ease: "power2.out",
   scrollTrigger: {
-    trigger: ".underline",
+    trigger: "#page6 ",
     scroller: "#main", // remove if not using a custom scroll container
-    start: "top 80%",
-    end: "top 20%",
-    // scrub: true,
+    start: "top 90%",
+    end: "top 40%",
     // markers: true
   }
 });
+ 
+ gsap.from("#page4-cont h1",{
+    y:200,
+    opacity:0,
+    stagger:0.2,
+    //  delay:1.65,
+    duration:1,
+     ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#page4-cont",
+    scroller: "#main", // remove if not using a custom scroll container
+    start: "top 90%",
+    end: "top 40%",
+    // markers: true
+  }
+  })
+  gsap.from("#page3-cont h1",{
+    y:200,
+    opacity:0,
+    stagger:0.2,
+    //  delay:1.65,
+    duration:1,
+     ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#page3-cont ",
+    scroller: "#main", // remove if not using a custom scroll container
+    start: "top 90%",
+    end: "top 40%",
+    // markers: true
+  }
+  })
+  gsap.from("#page6 #page6-cont h1",{
+    y:200,
+    opacity:0,
+    stagger:0.2,
+    //  delay:1.65,
+    duration:1,
+     ease: "power2.out",
+  scrollTrigger: {
+    trigger: "#page6 #page6-cont",
+    scroller: "#main", // remove if not using a custom scroll container
+    start: "top 90%",
+    end: "top 40%",
+    // markers: true
+  }
+  })
 
 }
-
-
 function cursorAnim(){
     Shery.mouseFollower({
     skew: true,
@@ -226,25 +270,8 @@ document.addEventListener("mousemove",function(dets){
     })
 })
 }
-
 sheryAnimation();
 flagffect();
 cursorAnim();
 LocomotiveAnimation();
 loaderAinmation();
-// document.querySelector("#page6-cont h1").addEventListener("mouseenter",function(){
-  
-//   gsap.from("#page6-cont h1",{
-//     onStart:function(){
-//       $('#page6-cont h1').textillate({ in: { effect: 'fadeIn' },out:{effect: 'fadeOut',} });
-//     }
-//   })
-// })
-// document.querySelector("#page6-cont h1").addEventListener("mouseleave",function(){
-  
-//   gsap.from("#page6-cont h1",{
-//     onStart:function(){
-//       $('#page6-cont h1').textillate({ out:{effect: 'fadeOut',} });
-//     }
-//   })
-// })
