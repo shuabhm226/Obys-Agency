@@ -1,6 +1,16 @@
 window.onbeforeunload = function () {
   window.scrollTo(0, 0); // ensures scroll to top
 };
+function loaderdisable(){
+  document.getElementById("loader").style.display = "block";
+document.body.classList.add("noscroll");
+
+// Loader off (after loading)
+setTimeout(() => {
+  document.getElementById("loader").style.display = "none";
+  document.body.classList.remove("noscroll");
+}, 5000); 
+}
  function LocomotiveAnimation(){
     gsap.registerPlugin(ScrollTrigger);
 
@@ -65,7 +75,7 @@ tl.to(".line h2",{
 tl.to("#loader",{
     opacity:0,
     duration:0.2,
-    delay:2,
+    delay:1.5,
 })
 tl.from("#page1",{
     y:1000,
@@ -270,8 +280,10 @@ document.addEventListener("mousemove",function(dets){
     })
 })
 }
+
 sheryAnimation();
 flagffect();
 cursorAnim();
 LocomotiveAnimation();
 loaderAinmation();
+loaderdisable();
