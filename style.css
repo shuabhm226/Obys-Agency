@@ -992,6 +992,13 @@ h4{
     /* padding: 3vw 0; */
     margin-bottom: 8vw;
 }
+#page6-cont{
+    margin-left:28%;
+    position: relative;
+    width: 78%;
+    /* overflow-y: hidden; */
+    /* background-color: red; */
+}
 #page6-cont #i{
     position: absolute;
     top: 0;
@@ -1150,7 +1157,6 @@ body.noscroll {
   z-index: 999999;
   background-color: #030303;
   padding: 25vh 5vw;
-
   top: 0;           /* Make sure it's at top */
   left: 0;          /* Left aligned */
   overflow: hidden; /* Hide anything outside */
