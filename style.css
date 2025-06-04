@@ -1145,11 +1145,15 @@ body.noscroll {
 }
 #loader{
     height: 100%;
-        width: 100%;
-        position: fixed;
-        z-index: 999999;
-        background-color: #030303;
-        padding: 25vh 5vw;
+  width: 100%;
+  position: fixed;
+  z-index: 999999;
+  background-color: #030303;
+  padding: 25vh 5vw;
+
+  top: 0;           /* Make sure it's at top */
+  left: 0;          /* Left aligned */
+  overflow: hidden; /* Hide anything outside */
     
 } 
 .line{
@@ -1405,7 +1409,7 @@ h4{
     margin-bottom: 0vh;
     top: 0;
 }
-#page3 .underline{
+#page3-cont .underline{
   margin-top: 7vw;
     width: 100%;
     height: 0.8px;
@@ -1418,7 +1422,8 @@ h4{
     width: 100%;
     /* overflow-y: hidden; */
     /* background-color: red; */
-    letter-spacing: -2.5px;
+    letter-spacing: -2.5;
+    padding-right: 2vw;
 }
 #page3-cont h1{
     font-size: 10.4vw;
