@@ -1154,13 +1154,13 @@ body.noscroll {
     height: 100%;
   width: 100%;
   position: fixed;
-  z-index: 999999;
+  z-index: 9999999;
   background-color: #030303;
   padding: 25vh 5vw;
   top: 0;           /* Make sure it's at top */
   left: 0;          /* Left aligned */
   overflow: hidden; /* Hide anything outside */
-    
+  
 } 
 .line{
      /* background-color: red; */
